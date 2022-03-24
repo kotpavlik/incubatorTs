@@ -1,11 +1,5 @@
 import React from "react";
-
-const selectedColor = {
-  color: "#ff4dd8",
-  fontSize: "20px",
-  fontWeight: "bold",
-  textShadow: "#4dffffaa 1px 0 10px",
-};
+import style from "./Star.module.css";
 
 type StarType = {
   selected: boolean;
@@ -13,7 +7,7 @@ type StarType = {
 
 const Star = (props: StarType) => {
   return props.selected ? (
-    <span style={selectedColor}> star </span>
+    <span className={style.star}> star </span>
   ) : (
     <span> star </span>
   );
