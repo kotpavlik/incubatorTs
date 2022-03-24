@@ -12,12 +12,11 @@ type StarType = {
 };
 
 const Star = (props: StarType) => {
-  debugger;
-  if (props.selected === true) {
-    return <span style={selectedColor}> star </span>;
-  } else {
-    return <span> star </span>;
-  }
+  return props.selected ? (
+    <span style={selectedColor}> star </span>
+  ) : (
+    <span> star </span>
+  );
 };
 
 export default Star;
