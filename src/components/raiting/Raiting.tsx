@@ -6,7 +6,7 @@ type RatyngType = {
 };
 
 const Raiting = (props: RatyngType) => {
-  debugger;
+
   switch (props.value) {
     case 1: {
       return (

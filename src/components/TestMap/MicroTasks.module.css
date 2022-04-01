@@ -1,0 +1,7 @@
+.cars {
+    margin: 10px;
+    border: 1px solid black;
+}
+.cars>tbody>tr>td {
+    border: 1px solid #000000;
+}

@@ -26,3 +26,15 @@
         transform: rotate(360deg);
     }
 }
+.button{
+    display: flex;
+    flex-direction: row;
+
+}
+.button>div>button{
+    width: 100px;
+    margin: 10px;
+}
+.money_list {
+    padding: 10px;
+}
