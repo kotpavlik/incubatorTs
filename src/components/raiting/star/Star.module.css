@@ -1,8 +1,24 @@
- .star {
-     color: #ff4dd8;
-     font-size: 20px;
-     font-weight: bold;
-     text-shadow: #4dffffaa 1px 0 10px;
- }
- 
- ;
+.star {
+    color: #ff4dd8;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: rgba(77, 255, 255, 0.84) 1px 2px 2px;
+    padding: 5px;
+    transition: 1s color;
+}
+
+.star:hover {
+
+    color: rgba(255, 77, 216, 0.66);
+    text-shadow: rgba(77, 255, 255, 0.47) 1px 2px 2px;
+    transiton: all 0.3s ease-in-out;
+}
+
+.noActiveStars {
+    font-size: 20px;
+    color: rgba(255, 77, 216, 0.25);
+    font-weight: bold;
+    padding: 5px;
+    transition: 1s color;
+}
+

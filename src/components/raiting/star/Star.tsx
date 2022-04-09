@@ -1,16 +1,20 @@
-import React from "react";
-import style from "./Star.module.css";
+import React, {MouseEventHandler} from 'react';
+import style from './Star.module.css';
 
 type StarType = {
-  selected: boolean;
+    selected: boolean;
+    returnStar: (idStar: number) => void;
+    idStar: number;
 };
-
 const Star = (props: StarType) => {
-  return props.selected ? (
-    <span className={style.star}> star </span>
-  ) : (
-    <span> star </span>
-  );
-};
+    let onClickChange =()=> {
+       return  props.returnStar(props.idStar);
+    };
+    return (
+                props.selected ? (<span onClick={onClickChange} className={style.star}> star </span>) : (
+                    <span onClick={onClickChange} className={style.noActiveStars}> star  </span>)
+
+    )
+}
 
 export default Star;

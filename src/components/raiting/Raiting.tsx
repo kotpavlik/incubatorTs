@@ -1,78 +1,30 @@
-import React from "react";
-import Star from "./star/Star";
+import React, {Dispatch, MouseEventHandler, SetStateAction} from 'react';
+import Star from './star/Star';
+import style from'./Rating.module.css'
 
-type RatyngType = {
-  value: 0 | 1 | 2 | 3 | 4 | 5;
+type RatingType = {
+    rating: number;
+    setRating: Dispatch<SetStateAction<number>>;
 };
 
-const Raiting = (props: RatyngType) => {
+const Raiting = (props: RatingType) => {
 
-  switch (props.value) {
-    case 1: {
-      return (
-        <div>
-          <Star selected={true} />
-          <Star selected={false} />
-          <Star selected={false} />
-          <Star selected={false} />
-          <Star selected={false} />
-        </div>
-      );
+    const IdStars = [1, 2, 3, 4, 5];
+    const returnStar = (id:number):void  => {
+        props.setRating(id);
     }
-    case 2: {
-      return (
-        <div>
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={false} />
-          <Star selected={false} />
-          <Star selected={false} />
+
+
+
+    return (
+        <div className={style.all_wrapper_stars}>
+            <Star returnStar={returnStar} idStar={IdStars[0]} selected={props.rating > 0}/>
+            <Star returnStar={returnStar} idStar={IdStars[1]} selected={props.rating > 1}/>
+            <Star returnStar={returnStar} idStar={IdStars[2]} selected={props.rating > 2}/>
+            <Star returnStar={returnStar} idStar={IdStars[3]} selected={props.rating > 3}/>
+            <Star returnStar={returnStar} idStar={IdStars[4]} selected={props.rating > 4}/>
         </div>
-      );
-    }
-    case 3: {
-      return (
-        <div>
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={false} />
-          <Star selected={false} />
-        </div>
-      );
-    }
-    case 4: {
-      return (
-        <div>
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={false} />
-        </div>
-      );
-    }
-    case 5: {
-      return (
-        <div>
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-          <Star selected={true} />
-        </div>
-      );
-    }
-  }
-  return (
-    <div>
-      <Star selected={false} />
-      <Star selected={false} />
-      <Star selected={false} />
-      <Star selected={false} />
-      <Star selected={false} />
-    </div>
-  );
+    )
 };
 
 export default Raiting;
