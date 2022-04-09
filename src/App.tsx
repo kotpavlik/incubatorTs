@@ -5,15 +5,16 @@ import PageTitle from './components/pageTitle/PageTitle';
 import Raiting from './components/raiting/Raiting';
 import MicroTasks from './components/TestMap/MicroTasks';
 import NewComponent from './components/newComponent/newComponent';
+import ToggleButton from './components/ToggleBut/ToggleButton';
 
 type topCarsType = {
-    manufacturer:string
-    model:string
+    manufacturer: string
+    model: string
 }
 export type ratingType = number;
 
 function App() {
-    const topCars:Array<topCarsType>= [
+    const topCars: Array<topCarsType> = [
         {manufacturer: 'BMW', model: 'm5cs'},
         {manufacturer: 'Mercedes', model: 'e63s'},
         {manufacturer: 'Audi', model: 'rs6'}
@@ -27,11 +28,11 @@ function App() {
                 <PageTitle title={'Hello hacking wold'}/>
                 <PageTitle title={'Hello hacking wold, my dear hackers'}/>
             </div>
-            <Raiting  rating={rating} setRating={setRating}/>
+            <Raiting rating={rating} setRating={setRating}/>
             <Accordion title={'Menu : '} collapsed={true}/>
             <Accordion title={'Users : '} collapsed={true}/>
             <MicroTasks cars={topCars}/>
-
+            <ToggleButton/>
             <NewComponent/>
         </div>
     );
