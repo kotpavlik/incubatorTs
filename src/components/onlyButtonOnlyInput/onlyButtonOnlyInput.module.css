@@ -1,0 +1,4 @@
+.button_input_all_wrapper{
+    display:flex;
+    flex-direction:row;
+}

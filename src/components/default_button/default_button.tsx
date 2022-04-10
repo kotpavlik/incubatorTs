@@ -7,7 +7,7 @@ type ButtonType = {
  }
 
 const DefaultButton = (props:ButtonType) => {
-    debugger
+
     return (
 
             <button className={props.styleButton} onClick={props.onClickHandler}>{props.name}</button>

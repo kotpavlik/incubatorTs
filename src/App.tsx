@@ -6,6 +6,8 @@ import Raiting from './components/raiting/Raiting';
 import MicroTasks from './components/TestMap/MicroTasks';
 import NewComponent from './components/newComponent/newComponent';
 import ToggleButton from './components/ToggleBut/ToggleButton';
+import {StartDirectory} from './components/fullInput/Start_directory';
+import {OnlyButtonOnlyInput} from './components/onlyButtonOnlyInput/onlyButtonOnlyInput';
 
 type topCarsType = {
     manufacturer: string
@@ -33,6 +35,8 @@ function App() {
             <Accordion title={'Users : '} collapsed={true}/>
             <MicroTasks cars={topCars}/>
             <ToggleButton/>
+            <StartDirectory/>
+            <OnlyButtonOnlyInput/>
             <NewComponent/>
         </div>
     );
