@@ -5,6 +5,7 @@
     text-shadow: rgba(77, 255, 255, 0.84) 1px 2px 2px;
     padding: 5px;
     transition: 1s color;
+    cursor: pointer;
 }
 
 .star:hover {
@@ -20,5 +21,6 @@
     font-weight: bold;
     padding: 5px;
     transition: 1s color;
+    ursor: pointer;
 }
 

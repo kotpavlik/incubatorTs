@@ -35,20 +35,57 @@
 .off{
     background-color: rgba(255, 0, 0, 0.5);
 }
-.on::before,.off::before{
-    content: "";
+
+
+
+.heartRed, .heartGreen {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heartRed:before, .heartGreen:before, .heartRed:after, .heartGreen:after {
     position: absolute;
-    left: 130px;
-    width: 30px ;
-    height:30px ;
-    border: .5px solid rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    box-shadow: -2px 2px 6px rgba(0, 0, 0);
+    content: "";
+    left: 45px;
+    top: 5px;
+    width: 25px;
+    height: 40px;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
 }
-.on::before{
-    background-color: rgba(0, 128, 0, 0.5);
-}
-.off::before{
-    background-color: rgba(255, 0, 0, 0.5);
+.heartRed:after, .heartGreen:after {
+    top: 5px;
+    left: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
 }
 
+
+.heartRed::after, .heartRed::before {
+    background-color: rgb(255, 108, 108);
+    transition: all 1s;
+
+}
+.heartGreen::after, .heartGreen::before {
+    background-color: rgb(90, 169, 90);
+    transition: all 1s;
+}

@@ -9,6 +9,10 @@ const ToggleButton = () => {
                 ? <button onClick={setIsToggle} className={style.on}>on</button>
                 : <button onClick={setIsToggle} className={style.off}>off</button>
             }
+            {isToggle
+                ? <div className={style.heartGreen} ></div>
+                : <div className={style.heartRed}></div>
+            }
         </div>
     );
 };
