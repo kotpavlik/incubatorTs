@@ -38,3 +38,11 @@
 .money_list {
     padding: 10px;
 }
+.button_input_default_and_no_default {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

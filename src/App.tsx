@@ -35,8 +35,8 @@ function App() {
             <Accordion title={'Users : '} collapsed={true}/>
             <MicroTasks cars={topCars}/>
             <ToggleButton/>
-            <StartDirectory/>
-            <OnlyButtonOnlyInput/>
+            <div className="button_input_default_and_no_default"><StartDirectory/>
+                <OnlyButtonOnlyInput/></div>
             <NewComponent/>
         </div>
     );
