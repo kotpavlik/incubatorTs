@@ -7,7 +7,7 @@ type RatingType = {
     setRating: Dispatch<SetStateAction<number>>;
 };
 
-const Raiting = (props: RatingType) => {
+const Rating = (props: RatingType) => {
 
     const IdStars = [1, 2, 3, 4, 5];
     const returnStar = (id:number):void  => {
@@ -27,4 +27,4 @@ const Raiting = (props: RatingType) => {
     )
 };
 
-export default Raiting;
+export default Rating;

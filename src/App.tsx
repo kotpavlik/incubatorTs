@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import './App.css';
 import Accordion from './components/accordion/Accordion';
 import PageTitle from './components/pageTitle/PageTitle';
-import Raiting from './components/raiting/Raiting';
+import Rating from './components/raiting/Raiting';
 import MicroTasks from './components/TestMap/MicroTasks';
 import NewComponent from './components/newComponent/newComponent';
 import ToggleButton from './components/ToggleBut/ToggleButton';
 import {StartDirectory} from './components/fullInput/Start_directory';
 import {OnlyButtonOnlyInput} from './components/onlyButtonOnlyInput/onlyButtonOnlyInput';
+import No_Control_Rating from './components/no_control_raiting/Raiting';
 
 type topCarsType = {
     manufacturer: string
@@ -30,7 +31,8 @@ function App() {
                 <PageTitle title={'Hello hacking wold'}/>
                 <PageTitle title={'Hello hacking wold, my dear hackers'}/>
             </div>
-            <Raiting rating={rating} setRating={setRating}/>
+            <Rating rating={rating} setRating={setRating}/>
+            <No_Control_Rating />
             <Accordion title={'Menu : '} collapsed={true}/>
             <Accordion title={'Users : '} collapsed={true}/>
             <MicroTasks cars={topCars}/>
