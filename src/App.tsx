@@ -33,8 +33,7 @@ function App() {
             </div>
             <Rating rating={rating} setRating={setRating}/>
             <No_Control_Rating />
-            <Accordion title={'Menu : '} collapsed={true}/>
-            <Accordion title={'Users : '} collapsed={true}/>
+            <Accordion />
             <MicroTasks cars={topCars}/>
             <ToggleButton/>
             <div className="button_input_default_and_no_default"><StartDirectory/>
