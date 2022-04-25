@@ -3,12 +3,12 @@ import style from './Star.module.css';
 
 type StarType = {
     selected: boolean;
-    returnStar: (idStar: number) => void;
-    idStar: number;
+    returnStar: () => void;
+
 };
 const Star = (props: StarType) => {
     let onClickChange =()=> {
-       return  props.returnStar(props.idStar);
+       return  props.returnStar();
     };
     return (
                 props.selected ? (<span onClick={onClickChange} className={style.star}> star </span>) : (
