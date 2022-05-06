@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Accordion from './components/accordion/Accordion';
 import PageTitle from './components/pageTitle/PageTitle';
-import Rating from './components/raiting/Raiting';
+import {Rating} from './components/raiting/Raiting';
 import MicroTasks from './components/TestMap/MicroTasks';
 import NewComponent from './components/newComponent/newComponent';
 import ToggleButton from './components/ToggleBut/ToggleButton';
