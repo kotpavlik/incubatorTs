@@ -10,6 +10,7 @@ export const FullInput = (props: FullInputPropsType) => {
 
 
     const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log(typeof e)
         setValue(e.currentTarget.value);
 
     }

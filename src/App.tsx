@@ -9,6 +9,7 @@ import ToggleButton from './components/ToggleBut/ToggleButton';
 import {StartDirectory} from './components/fullInput/Start_directory';
 import {OnlyButtonOnlyInput} from './components/onlyButtonOnlyInput/onlyButtonOnlyInput';
 import No_Control_Rating from './components/no_control_raiting/Raiting';
+import {Clock} from './components/clock/Clock';
 
 type topCarsType = {
     manufacturer: string
@@ -39,6 +40,7 @@ function App() {
             <div className="button_input_default_and_no_default"><StartDirectory/>
                 <OnlyButtonOnlyInput/></div>
             <NewComponent/>
+            <Clock/>
         </div>
     );
 }
