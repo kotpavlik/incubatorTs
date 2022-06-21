@@ -1,6 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
-import {action} from '@storybook/addon-actions';
 import { Clock } from './Clock';
 
 export default {
